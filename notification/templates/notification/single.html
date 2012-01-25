@@ -9,7 +9,7 @@
 
 {% block body %}
 
-    <h1>{% trans "From" %} {{ notice.sender }}</h1>
+    {% if notice.sender %}<h1>{% trans "From" %} {{ notice.sender }}</h1>{% endif %}
 
     <h2>{{ notice.added|date:"l, F j, Y" }}</h2>
     {{ notice.message|linebreaks }}
