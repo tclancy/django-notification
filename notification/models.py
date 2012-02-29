@@ -51,9 +51,9 @@ NOTICE_MEDIA = getattr(settings, "NOTICE_MEDIA", (
 ))
 
 # how spam-sensitive is the medium
-NOTICE_MEDIA_DEFAULTS = {
+NOTICE_MEDIA_DEFAULTS = getattr(settings, "NOTICE_MEDIA_DEFAULTS", {
     "1": 2 # email
-}
+})
 
 class NoticeSetting(models.Model):
     """
